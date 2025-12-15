@@ -1,0 +1,12 @@
+DROP TABLE IF EXISTS `knihy`;
+CREATE TABLE IF NOT EXISTS `knihy` (
+  `id` varchar(30) NOT NULL, -- Unikátne ID knihy
+  `isbn` varchar(13) COLLATE utf8mb3_slovak_ci DEFAULT NULL, -- ISBN číslo knihy
+  `nazov` varchar(100) COLLATE utf8mb3_slovak_ci DEFAULT NULL, -- Názov knihy
+  `autor` varchar(50) COLLATE utf8mb3_slovak_ci DEFAULT NULL, -- Autor knihy
+  `vydanie` int DEFAULT NULL, -- Vydanie knihy (napr. 1, 2, 3...)
+  `pocet_kusov` int DEFAULT NULL, -- Počet dostupných kusov
+  `cena` decimal(10,2) DEFAULT NULL, -- Cena knihy
+  `vydavatel` varchar(50) COLLATE utf8mb3_slovak_ci DEFAULT NULL, -- Vydavateľ knihy
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_slovak_ci;
